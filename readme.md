@@ -43,7 +43,6 @@ This is a simple image preloader
 	<label class="file-label">
 	
 		<input type="file" title="" accept=".jpg, .jpeg, .png" n-file-uploader/>
-		</i>
 	
 	</label> 
 	
