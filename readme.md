@@ -31,7 +31,7 @@ This is a simple image preloader
 			var reader = new FileReader();
 			reader.onload = function(e) {
 				$scope.$apply(function() {
-					vm.file = reader.result;
+					scope.file = reader.result;
 				});
 			};
 			reader.readAsDataURL(data);
@@ -43,12 +43,11 @@ This is a simple image preloader
 	<label class="file-label">
 	
 		<input type="file" title="" accept=".jpg, .jpeg, .png" n-file-uploader/>
-			<span ng-if="!fileReady">
-				Upload
-			</span>
 		</i>
 	
 	</label> 
+	
+	{{file}}
 ```
 
 ### Parameters
