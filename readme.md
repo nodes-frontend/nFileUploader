@@ -1,8 +1,8 @@
-# Nodes Galactic Image Preloader
+# Nodes Galactic simple file uploader
 
 Yello!
 
-This is a simple image preloader
+This is a simple file uploader
 
 ## How to
 
