@@ -1,7 +1,7 @@
 {
-	"name": "nImagePreloader",
+	"name": "nFileUploader",
 	"version": "1.0.0",
-	"description": "Nodes Image Preloader",
+	"description": "Nodes file uploader",
 	"homepage": "http://nodes.dk",
 	"author": "Tommy Jepsen",
 	"repository": {

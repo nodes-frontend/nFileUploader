@@ -6,16 +6,54 @@ This is a simple image preloader
 
 ## How to
 
+
+
+## Service
+```javascript
+	var file = $rootScope.file;
+	
+	nFileUploader.post(file, dataTransform, options).to(url).then(function(response) {
+		deferred.resolve(response);
+	}, function(error) {
+		deferred.reject([error]);
+	}, function(progress) {
+		deferred.notify();
+	});
+```
+
+
+## Uploading it
+
+```javascript
+	//Listen if there is new file uploaded
+	$rootScope.$watch('file', function(data) {
+		if(data != undefined) {
+			var reader = new FileReader();
+			reader.onload = function(e) {
+				$scope.$apply(function() {
+					vm.file = reader.result;
+				});
+			};
+			reader.readAsDataURL(data);
+		}
+	});
+```
+
 ```html
-<n-image-preloader source="mediaAgreements.img" width="200" height="200" extra-classes="" extra-loading-classes="" ></n-image-preloader> 
+	<label class="file-label">
+	
+		<input type="file" title="" accept=".jpg, .jpeg, .png" n-file-uploader/>
+			<span ng-if="!fileReady">
+				Upload
+			</span>
+		</i>
+	
+	</label> 
 ```
 
 ### Parameters
 
-Source is source of the image
+Set token in factory under xhr.setRequestHeader
+File is put into $rootScope, remember to delete it after its not in any use more
 
-Width and height is null then auto height and width
 
-extraClasses if for image
-
-extraLoadingClasses is for Loading
