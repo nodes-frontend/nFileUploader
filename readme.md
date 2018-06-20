@@ -1,4 +1,5 @@
-# ⛔️ [DEPRECATED] Nodes Galactic simple file uploader
+# Nodes Galactic simple file uploader
+_Not maintained by Nodes anymore_
 
 This is a simple file uploader
 
